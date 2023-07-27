@@ -2,6 +2,33 @@
 
 {% block content %}
 
+{% load static %}
+
+<header class="row bg-black">
+  <div class="col-md-4">
+    <img src="{% static 'portfolio/Main-portfolio.jpg' %}" width="600px" height="600px"
+      style="object-fit: contain; border-radius: 50%;" alt="">
+  </div>
+
+  <div class="col-md-8 my-auto">
+    <h1>Soy</h1><strong>Franco Rutigliano</strong></h1>
+    <h3>Python Backend Dev <strong>Jr</strong></h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni commodi atque eum rem. Fuga dolor mollitia
+      maxime labore ipsam ducimus incidunt error dolores culpa id adipisci iure ab non repudiandae, sit unde,
+      reprehenderit sunt quisquam praesentium dicta voluptatem sint, minima laboriosam eum. Perspiciatis blanditiis
+      dicta labore incidunt possimus nisi. Id ad, aut, consequuntur explicabo ea sint culpa magni eveniet qui aspernatur
+      iste ex nihil, hic cum? Cum labore, obcaecati repellendus aspernatur odit, atque aperiam ex sed ullam dignissimos
+      sequi quis id quaerat perspiciatis? Sit voluptates consequuntur omnis similique minus, placeat maxime quam esse
+      maiores consectetur odio culpa impedit quaerat!</p>
+
+    <a href="{% static 'portfolio/CV-Franco-Rutigliano.pdf' %}" target="_blank"
+      class="btn btn-primary btn-lg rounded-0 my-3">Descargar CV</a>
+
+  </div>
+
+</header>
+
 <h1>Home</h1>
 
 {% for project in projects %}
