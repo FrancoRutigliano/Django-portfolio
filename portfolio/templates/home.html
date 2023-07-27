@@ -6,11 +6,10 @@
 
 <header class="row bg-black">
   <div class="col-md-4">
-    <img src="{% static 'portfolio/Main-portfolio.jpg' %}" width="600px" height="600px"
-      style="object-fit: contain; border-radius: 50%;" alt="">
+    <img src="{% static 'portfolio/Main-portfolio.jpg' %}" class="img-fluid" alt="">
   </div>
 
-  <div class="col-md-8 my-auto">
+  <div class=" col-md-8 my-auto">
     <h1>Soy</h1><strong>Franco Rutigliano</strong></h1>
     <h3>Python Backend Dev <strong>Jr</strong></h3>
 
@@ -31,18 +30,33 @@
 
 <h1>Home</h1>
 
-{% for project in projects %}
+<div class="row my-4 text-center text-light">
 
-<h2>{{project.title}}</h2>
-<P>{{project.description}}</P>
-<img src="{{project.image.url}}" alt="{{project.title}}">
+  <h3>My Projects</h3>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, ea.</p>
 
-{% if project.url %}
+  {% for project in projects %}
 
-<a href="{{project.url}}">{{project.url}}</a>
+  <div class="col-md-4 p-4">
+    <div class="card bg-black card-project">
+      <img src="{{project.image.url}}" class="card-img-top" alt="{{project.title}}">
+      <div class="card-body">
 
-{% endif %}
+        <h2>{{project.title}}</h2>
+        <P>{{project.description}}</P>
 
-{% endfor %}
+        {% if project.url %}
 
-{% endblock %}
+        <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+
+  {% endblock %}
+
+</div>

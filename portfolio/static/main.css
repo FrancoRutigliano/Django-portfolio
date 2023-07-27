@@ -5,3 +5,12 @@ body {
 .bg-black {
   background: #000;
 }
+
+.card-project {
+  cursor: pointer;
+}
+
+.card-project:hover {
+  border: 1px solid #fff;
+
+}
